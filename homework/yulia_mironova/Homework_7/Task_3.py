@@ -2,6 +2,7 @@ def find_number(stroka):
     number = int(stroka.split()[-1])
     return number
 
+
 str_1 = 'результат операции: 42'
 str_2 = 'результат операции: 54'
 str_3 = 'результат работы программы: 209'
