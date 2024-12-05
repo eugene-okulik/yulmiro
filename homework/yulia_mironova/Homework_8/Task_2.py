@@ -1,4 +1,4 @@
-def fibonacci(limit = 1000):
+def fibonacci(limit=1000):
     num_1 = 0
     num_2 = 1
     count = 2
