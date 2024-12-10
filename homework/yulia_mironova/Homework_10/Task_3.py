@@ -28,4 +28,5 @@ def calc(first, second, operation):
     elif operation == '*':
         return second * first
 
+
 print(calc(number_1, number_2))
