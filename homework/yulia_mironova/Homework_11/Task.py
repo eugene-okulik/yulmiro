@@ -31,7 +31,7 @@ textbook_3 = Textbook('Прописи', 'Пушкарева', 40, '1-35400-841-2
 book_1.reserved = True
 book_5.reserved = True
 textbook_3.reserved = True
-print(f'Название: {book_1.title}, Автор: {book_1.author}, cтраниц: {book_1.pages}, материал: {book_1.material}'
+print(f'Название: {book_1.title}, Автор: {book_1.author}, страниц: {book_1.pages}, материал: {book_1.material}'
       f'{', зарезервирована' if book_1.reserved else ''}')
 print(f'Название: {book_2.title}, Автор: {book_2.author}, страниц: {book_2.pages}, материал: {book_2.material}'
       f'{', зарезервирована' if book_2.reserved else ''}')
