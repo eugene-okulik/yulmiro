@@ -8,6 +8,10 @@ class Book:
         self.isbn = isbn
         self.reserved = reserved
 
+    def print_book(self):
+        print(f"Название: {self.title}, Автор: {self.author}, страниц: {self.pages}, материал: {self.material}"
+              f"{', зарезервирована' if self.reserved else ''}")
+
 
 class Textbook(Book):
     def __init__(self, title, author, pages, isbn, reserved, subject, group, istask):
@@ -15,6 +19,10 @@ class Textbook(Book):
         self.subject = subject
         self.group = group
         self.istask = istask
+
+    def print_testbook(self):
+        print(f"Название: {self.title}, Автор: {self.author}, страниц: {self.pages}, "
+              f"предмет: {self.subject}, класс {self.group}{', зарезервирована' if self.reserved else ''}")
 
 
 book_1 = Book('Идиот', 'Достоевский', 500, '5-87818-228-9', False)
@@ -31,20 +39,12 @@ textbook_3 = Textbook('Прописи', 'Пушкарева', 40, '1-35400-841-2
 book_1.reserved = True
 book_5.reserved = True
 textbook_3.reserved = True
-print(f'Название: {book_1.title}, Автор: {book_1.author}, страниц: {book_1.pages}, материал: {book_1.material}'
-      f'{', зарезервирована' if book_1.reserved else ''}')
-print(f'Название: {book_2.title}, Автор: {book_2.author}, страниц: {book_2.pages}, материал: {book_2.material}'
-      f'{', зарезервирована' if book_2.reserved else ''}')
-print(f'Название: {book_3.title}, Автор: {book_3.author}, страниц: {book_3.pages}, материал: {book_3.material}'
-      f'{', зарезервирована' if book_3.reserved else ''}')
-print(f'Название: {book_4.title}, Автор: {book_4.author}, страниц: {book_4.pages}, материал: {book_4.material}'
-      f'{', зарезервирована' if book_4.reserved else ''}')
-print(f'Название: {book_5.title}, Автор: {book_5.author}, страниц: {book_5.pages}, материал: {book_5.material}'
-      f'{', зарезервирована' if book_5.reserved else ''}')
+book_1.print_book()
+book_2.print_book()
+book_3.print_book()
+book_4.print_book()
+book_5.print_book()
 print()
-print(f'Название: {textbook_1.title}, Автор: {textbook_1.author}, страниц: {textbook_1.pages}, '
-      f'предмет: {textbook_1.subject}, класс {textbook_1.group}{', зарезервирована' if textbook_1.reserved else ''}')
-print(f'Название: {textbook_2.title}, Автор: {textbook_2.author}, страниц: {textbook_2.pages}, '
-      f'предмет: {textbook_2.subject}, класс {textbook_2.group}{', зарезервирована' if textbook_2.reserved else ''}')
-print(f'Название: {textbook_3.title}, Автор: {textbook_3.author}, страниц: {textbook_3.pages}, '
-      f'предмет: {textbook_3.subject}, класс {textbook_3.group}{', зарезервирована' if textbook_3.reserved else ''}')
+textbook_1.print_testbook()
+textbook_2.print_testbook()
+textbook_3.print_testbook()
