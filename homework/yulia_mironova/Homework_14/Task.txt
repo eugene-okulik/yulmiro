@@ -1,0 +1,35 @@
+Я сначала сделала 3 шаг(создала группу), иначе не могу создать студента
+
+INSERT INTO `groups` (title, start_date, end_date) values ('new_test_group', '12-11-2024', '15-03-2025')
+
+INSERT into students (name, second_name, group_id) values ('Test', 'Testovich', 2410)
+
+INSERT INTO books (title, taken_by_student_id) values ('test_book_1', 3797)
+INSERT INTO books (title, taken_by_student_id) values ('test_book_2', 3797)
+INSERT INTO books (title, taken_by_student_id) values ('test_book_3', 3797)
+
+INSERT INTO subjets (title) values ('Math')
+INSERT INTO subjets (title) values ('Geography')
+INSERT INTO subjets (title) values ('Informatics')
+
+INSERT INTO lessons (title,subject_id) values ('Решение задач', 3714)
+INSERT INTO lessons (title,subject_id) values ('Решение уравнений', 3714)
+INSERT INTO lessons (title,subject_id) values ('Страны и столицы', 3715)
+INSERT INTO lessons (title,subject_id) values ('Реки и озера', 3715)
+INSERT INTO lessons (title,subject_id) values ('Питон', 3716)
+INSERT INTO lessons (title,subject_id) values ('SQL', 3716)
+
+INSERT INTO marks (value, lesson_id, student_id) values (5, 7240, 3797)
+INSERT INTO marks (value, lesson_id, student_id) values (4, 7241, 3797)
+INSERT INTO marks (value, lesson_id, student_id) values (3, 7242, 3797)
+INSERT INTO marks (value, lesson_id, student_id) values (4, 7243, 3797)
+INSERT INTO marks (value, lesson_id, student_id) values (5, 7244, 3797)
+INSERT INTO marks (value, lesson_id, student_id) values (2, 7245, 3797)
+
+
+SELECT * from marks where student_id = 3797
+SELECT * from books WHERE taken_by_student_id = 3797
+
+*не уверена в этом запросе. тут надо бороться с тем, что каждая оценка из таблицы marks соединяется с каждой книгой?
+SELECT * FROM `groups` g join students s on g.id = s.group_id left join books b on s.id = b.taken_by_student_id
+left JOIN marks m on m.student_id  = s.id left join lessons l on l.id = m.lesson_id left join subjets s2 on l.subject_id = s2.id WHERE s.id = 3797
