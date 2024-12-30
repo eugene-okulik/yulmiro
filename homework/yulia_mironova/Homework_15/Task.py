@@ -52,7 +52,7 @@ values_2 = [
     (3, lesson3_id, student_id),
     (5, lesson4_id, student_id)
 ]
-cursor.executemany(query_marks,values_2)
+cursor.executemany(query_marks, values_2)
 db.commit()
 
 cursor.execute(f'SELECT * from marks where student_id = {student_id}')
