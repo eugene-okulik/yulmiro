@@ -25,8 +25,8 @@ with open(file_path, newline='') as file_csv:
         data.append(row)
 
 query = """
-    SELECT s.id 
-    FROM `groups` g 
+    SELECT s.id
+    FROM `groups` g
     JOIN students s ON g.id = s.group_id
     LEFT JOIN books b ON s.id = b.taken_by_student_id
     LEFT JOIN marks m ON m.student_id = s.id
