@@ -28,7 +28,7 @@ def read_files():
         file_path = os.path.join(args.path, file_name)
         with open(file_path, 'r') as file_data:
             for line in file_data:
-                line_number+=1
+                line_number += 1
                 yield line, file_name, line_number
 
 
