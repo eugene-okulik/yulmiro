@@ -41,7 +41,7 @@ def put_obj():
         "name": "Yulia's Object"
     }
     response = requests.put(f'http://167.172.172.115:52353/object/{obj_id}', json=body).json()
-    assert response['data'] ['material'] == 'silk', 'Error'
+    assert response['data']['material'] == 'silk', 'Error'
     clear_obj(obj_id)
 
 
@@ -55,6 +55,7 @@ def patch_obj():
         }
     }
     response = requests.patch(f'http://167.172.172.115:52353/object/{obj_id}', json=body).json()
+    print(response)
     clear_obj(obj_id)
 
 
