@@ -1,6 +1,7 @@
 import pytest
 import requests
 
+
 @pytest.fixture(scope="session")
 def start_finish_testing():
     print('Start testing')
@@ -31,9 +32,13 @@ def new_obj():
 
 
 @pytest.mark.critical
-@pytest.mark.parametrize('title', [{"data":{"color": "green", "size": "large"}, "name": "Yulia's Object1"},
-                                  {"data":{"color": "yellow", "size": "small"}, "name": "Yulia's Object2"},
-                                  {"data":{"color": "red", "size": "medium"}, "name": "Yulia's Object3"}])
+@pytest.mark.parametrize('title',
+                        [
+                             {"data": {"color": "green", "size": "large"}, "name": "Yulia's Object1"},
+                             {"data": {"color": "yellow", "size": "small"}, "name": "Yulia's Object2"},
+                             {"data": {"color": "red", "size": "medium"}, "name": "Yulia's Object3"}
+                        ]
+)
 def test_create_obj(title, switch_test, start_finish_testing):
     body = title
     response = requests.post('http://167.172.172.115:52353/object', json=body).json()
