@@ -10,5 +10,6 @@ class DeleteObject(Endpoint):
         self.response = requests.delete(f'{self.url}/{obj_id}')
         return self.response
 
+    @allure.step('Check that response code is correct')
     def check_response_code_is_correct(self):
         assert self.response.status_code == 200

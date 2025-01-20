@@ -11,6 +11,6 @@ class GetObject(Endpoint):
         self.json = self.response.json()
         return self.response
 
-
+    @allure.step('Check that id is correct')
     def check_response_id_is_correct(self, obj_id):
         assert self.json['id'] == obj_id

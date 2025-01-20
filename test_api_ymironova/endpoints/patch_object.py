@@ -11,7 +11,6 @@ class PatchObject(Endpoint):
         self.json = self.response.json()
         return self.response
 
-
     @allure.step('Check that modification is correct')
     def check_response_change_patch_is_correct(self):
         assert self.json['data']['color'] == 'orange'
