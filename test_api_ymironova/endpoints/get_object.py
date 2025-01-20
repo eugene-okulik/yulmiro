@@ -2,8 +2,8 @@ import requests
 import allure
 from test_api_ymironova.endpoints.endpoint import Endpoint
 
-class GetObject(Endpoint):
 
+class GetObject(Endpoint):
 
     @allure.step('Show object')
     def get_obj(self, obj_id):

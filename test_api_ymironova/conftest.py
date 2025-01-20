@@ -33,7 +33,7 @@ def create_patch_obj():
 
 @pytest.fixture
 def setup_and_teardown():
-    data = {"data": {"color": "green", "size": "large"},"name": "Yulia's Object"}
+    data = {"data": {"color": "green", "size": "large"}, "name": "Yulia's Object"}
     obj_for_test = PostObject()
     response = obj_for_test.create_obj(data)
     obj_id = response.json()['id']
@@ -44,7 +44,7 @@ def setup_and_teardown():
 
 @pytest.fixture
 def setup():
-    data = {"data": {"color": "green", "size": "large"},"name": "Yulia's Object"}
+    data = {"data": {"color": "green", "size": "large"}, "name": "Yulia's Object"}
     obj_for_test = PostObject()
     response = obj_for_test.create_obj(data)
     obj_id = response.json()['id']

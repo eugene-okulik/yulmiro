@@ -2,8 +2,8 @@ import requests
 import allure
 from test_api_ymironova.endpoints.endpoint import Endpoint
 
-class PatchObject(Endpoint):
 
+class PatchObject(Endpoint):
 
     @allure.step('Modification object')
     def patch_obj(self, obj_id, data):

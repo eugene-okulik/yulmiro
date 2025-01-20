@@ -1,9 +1,9 @@
 import pytest
 
 DATA = [
-        {"data": {"color": "green", "size": "large"}, "name": "Yulia's Object1"},
-        {"data": {"color": "yellow", "size": "small"}, "name": "Yulia's Object2"},
-        {"data": {"color": "red", "size": "medium"}, "name": "Yulia's Object3"}
+    {"data": {"color": "green", "size": "large"}, "name": "Yulia's Object1"},
+    {"data": {"color": "yellow", "size": "small"}, "name": "Yulia's Object2"},
+    {"data": {"color": "red", "size": "medium"}, "name": "Yulia's Object3"}
 ]
 
 PUT_DATA = [{"data": {"color": "green", "size": "large", "material": "silk"}, "name": "Yulia's Object1"}]
