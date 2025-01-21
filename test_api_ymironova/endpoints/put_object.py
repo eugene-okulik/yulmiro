@@ -12,5 +12,5 @@ class PutObject(Endpoint):
         return self.response
 
     @allure.step('Check that modification is correct')
-    def check_response_change_put_is_correct(self):
-        assert self.json['data']['material'] == 'silk'
+    def check_response_change_put_is_correct(self, data):
+        assert self.json['data']['material'] == data['data']['material']
