@@ -5,11 +5,11 @@ import random
 
 def create_id():
     list_id = []
-    n = random.randint(1, 10)         #количество объектов, на которых будем замерять скорость
+    n = random.randint(1, 10)         # количество объектов, на которых будем замерять скорость
     body = {"data": {"color": "blue", "size": "small"}, "name": "Yulia's Object"}
     for i in range(n):
         response = requests.post('http://167.172.172.115:52353/object', json=body).json()
-        list_id.append(response['id'])    #создаем список с id объектов, которые точно будут существовать
+        list_id.append(response['id'])    # создаем список с id объектов, которые точно будут существовать
     return list_id
 
 
