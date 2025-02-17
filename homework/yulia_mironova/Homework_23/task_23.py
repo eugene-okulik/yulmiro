@@ -38,7 +38,7 @@ def test_form(driver):
     gender.click()
     number = driver.find_element(By.CSS_SELECTOR, '[placeholder = "Mobile Number"]')
     number.send_keys('1234567890')
-    date_of_birth = driver.find_element(By.ID,'dateOfBirthInput')
+    date_of_birth = driver.find_element(By.ID, 'dateOfBirthInput')
     date_of_birth.click()
     select_month = driver.find_element(By.CSS_SELECTOR, '.react-datepicker__month-select')
     dropdown_month = Select(select_month)
@@ -46,19 +46,19 @@ def test_form(driver):
     select_year = driver.find_element(By.CSS_SELECTOR, '.react-datepicker__year-select')
     dropdown_year = Select(select_year)
     dropdown_year.select_by_value('1999')
-    date = driver.find_element(By.CSS_SELECTOR,'[aria-label = "Choose Monday, September 6th, 1999"]')
+    date = driver.find_element(By.CSS_SELECTOR, '[aria-label = "Choose Monday, September 6th, 1999"]')
     date.click()
     subject_1 = driver.find_element(By.CSS_SELECTOR, '.subjects-auto-complete__control.css-yk16xz-control')
     subject_1.click()
     subject_2 = driver.find_element(By.CSS_SELECTOR, '.subjects-auto-complete__control input[type="text"]')
     subject_2.send_keys('Maths')
-    subject_ok = driver.find_element(By.CSS_SELECTOR,'.subjects-auto-complete__menu')
+    subject_ok = driver.find_element(By.CSS_SELECTOR, '.subjects-auto-complete__menu')
     subject_ok.click()
     hobby = driver.find_element(By.CSS_SELECTOR, '[for ="hobbies-checkbox-3"]')
     hobby.click()
     address = driver.find_element(By.CSS_SELECTOR, '[placeholder = "Current Address"]')
     address.send_keys('Moscow, Lenina 47A')
-    state = driver.find_element(By.CSS_SELECTOR,'#state .css-yk16xz-control .css-1hwfws3')
+    state = driver.find_element(By.CSS_SELECTOR, '#state .css-yk16xz-control .css-1hwfws3')
     state.click()
     input_state = driver.find_element(By.ID, 'react-select-3-input')
     input_state.send_keys('Uttar Pradesh')
@@ -73,13 +73,13 @@ def test_form(driver):
     submit = driver.find_element(By.ID, 'submit')
     submit.submit()
 
-    name_value = driver.find_element(By.XPATH,'//td [text()="Student Name"]/following-sibling::td')
+    name_value = driver.find_element(By.XPATH, '//td [text()="Student Name"]/following-sibling::td')
     print(name_value.text)
-    email_value = driver.find_element(By.XPATH,'//td [text()="Student Email"]/following-sibling::td')
+    email_value = driver.find_element(By.XPATH, '//td [text()="Student Email"]/following-sibling::td')
     print(email_value.text)
     gender_value = driver.find_element(By.XPATH, '//td [text()="Gender"]/following-sibling::td')
     print(gender_value.text)
-    mobile_value = driver.find_element(By.XPATH,'//td [text()="Mobile"]/following-sibling::td')
+    mobile_value = driver.find_element(By.XPATH, '//td [text()="Mobile"]/following-sibling::td')
     print(mobile_value.text)
     birthday_value = driver.find_element(By.XPATH, '//td [text()="Date of Birth"]/following-sibling::td')
     print(birthday_value.text)
@@ -87,7 +87,7 @@ def test_form(driver):
     print(subjects_value.text)
     hobby_value = driver.find_element(By.XPATH, '//td [text()="Hobbies"]/following-sibling::td')
     print(hobby_value.text)
-    address_value = driver.find_element(By.XPATH,'//td [text()="Address"]/following-sibling::td')
+    address_value = driver.find_element(By.XPATH, '//td [text()="Address"]/following-sibling::td')
     print(address_value.text)
     state_city_value = driver.find_element(By.XPATH, '//td [text()="State and City"]/following-sibling::td')
     print(state_city_value.text)
@@ -95,12 +95,12 @@ def test_form(driver):
 
 def test_select(driver):
     driver.get('https://www.qa-practice.com/elements/select/single_select')
-    language = driver.find_element(By.CSS_SELECTOR,'select[name ="choose_language"]')
+    language = driver.find_element(By.CSS_SELECTOR, 'select[name ="choose_language"]')
     select_language = Select(language)
     select_language.select_by_value('1')
-    value = driver.find_element(By.CSS_SELECTOR,'option[value ="1"]').text
+    value = driver.find_element(By.CSS_SELECTOR, 'option[value ="1"]').text
     language.submit()
-    assert value == driver.find_element(By.ID,'result-text').text
+    assert value == driver.find_element(By.ID, 'result-text').text
 
 
 def test_loading(driver):
