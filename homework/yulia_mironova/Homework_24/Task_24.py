@@ -27,14 +27,14 @@ def test_buy_mobile(driver):
     driver.switch_to.window(tabs[1])
     driver.find_element(By.CLASS_NAME, 'btn-success').click()
     alert = Alert(driver)
-    WebDriverWait(driver,5).until(EC.alert_is_present())
+    WebDriverWait(driver, 5).until(EC.alert_is_present())
     alert.accept()
     driver.close()
     driver.switch_to.window(tabs[0])
     driver.find_element(By.LINK_TEXT, 'Cart').click()
     WebDriverWait(driver, 5).until(
         EC.text_to_be_present_in_element(
-            (By.XPATH,'//*[text()="Samsung galaxy s6"]'),
+            (By.XPATH, '//*[text()="Samsung galaxy s6"]'),
             'Samsung galaxy s6'
         )
     )
@@ -43,7 +43,7 @@ def test_buy_mobile(driver):
 def test_compare(driver):
     driver.get('https://magento.softwaretestingboard.com/gear/bags.html')
     driver.refresh()
-    card = driver.find_element(By.CSS_SELECTOR,'[alt="Push It Messenger Bag"]')
+    card = driver.find_element(By.CSS_SELECTOR, '[alt="Push It Messenger Bag"]')
     compare_list = driver.find_elements(By.CSS_SELECTOR, 'a.action.tocompare')
     compare = compare_list[0]
     ActionChains(driver).move_to_element(card).click(compare).perform()
