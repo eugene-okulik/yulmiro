@@ -16,9 +16,11 @@ def page(context: BrowserContext, playwright):
 def create_acc_page(page):
     return CreateAccount(page)
 
+
 @pytest.fixture()
 def create_eco_friendly_page(page):
     return EcoFriendlyPage(page)
+
 
 @pytest.fixture()
 def create_sale_page(page):
