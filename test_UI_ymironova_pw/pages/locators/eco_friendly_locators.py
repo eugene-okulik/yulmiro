@@ -1,6 +1,6 @@
 cards_loc = '.product-image-photo'
 name_item_loc = '.product-item-link'
-size_loc= '[option-label="29"]'
+size_loc = '[option-label="29"]'
 color_loc = '[option-label="Orange"]'
 button_cart_loc = '[title="Add to Cart"]'
 message_successful_added_loc = '[data-bind="html: $parent.prepareMessageForHtml(message.text)"]'

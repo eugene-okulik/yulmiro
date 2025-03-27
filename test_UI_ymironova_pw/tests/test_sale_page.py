@@ -1,7 +1,8 @@
 def test_open_section_by_picture(create_sale_page):
     create_sale_page.open_page()  # открываем страницу
     create_sale_page.check_page_header_title_is("Sale")  # проверяем заголовок страницы
-    create_sale_page.open_page_in_new_tab()  # по клику на картинке+ctrl в соседней вкладке открываем страницу с скидками
+    create_sale_page.open_page_in_new_tab()  # по клику на картинке+ctrl в соседней вкладке открываем страницу с
+    # скидками
 
 
 def test_open_section_by_link(create_sale_page):
